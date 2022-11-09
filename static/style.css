@@ -1,0 +1,81 @@
+body {
+    background-color: aqua;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px;
+}
+
+.photo {
+    max-width: 250px;
+}
+
+.photo:hover {
+    filter: brightness(50%);
+}
+
+#profile-photo {
+    max-width: 400px;
+}
+
+#photos figure {
+    display: inline-block;
+}
+
+#add {
+    background-color: green;
+    border: none;
+    color:white;
+    padding: 10px 14px;
+    text-align: center;
+    font-size: 16px;
+    transition-duration: 0.2s; 
+}
+
+#add:hover {
+    background-color: darkgreen;
+}
+
+#adopt {
+    background-color: blue;
+    border: none;
+    color:white;
+    padding: 10px 14px;
+    text-align: center;
+    font-size: 16px;
+    transition-duration: 0.2s;
+}
+
+#adopt:hover {
+    background-color:darkblue;
+}
+
+#edit {
+    background-color: green;
+    border: none;
+    color:white;
+    padding: 10px 14px;
+    text-align: center;
+    font-size: 16px;
+    transition-duration: 0.2s; 
+}
+
+#edit:hover {
+    background-color: darkgreen;
+}
+
+#delete {
+    background-color: red;
+    border: none;
+    color:white;
+    padding: 10px 14px;
+    text-align: center;
+    font-size: 16px;
+    transition-duration: 0.2s; 
+}
+
+#delete:hover {
+    background-color: darkred;
+}

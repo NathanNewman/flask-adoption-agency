@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adoption Agency</title>
+    <link href="/static/style.css" type="text/css" rel="stylesheet" />
+  </head>
+  <body>
+    <h1>Pets</h1>
+    <form action="/add">
+      <button id="add">Add Pet</button>
+    </form>
+    <div id="photos">
+      {% for pet in pets %} {% if pet.available %}
+      <figure>
+        <a href="/{{pet.id}}">
+          <img class="photo" id="{{pet.id}}" src="{{pet.photo_url}}" />
+        <figcaption class="photo-label">{{pet.name}} is available</figcaption>
+        </a>
+      </figure>
+      {% else %}
+      <figure>
+        <a href="/{{pet.id}}">
+        <img class="photo" id="{{pet.id}}" src="{{pet.photo_url}}" />
+        <figcaption class="photo-label">{{pet.name}} is unavailable</figcaption>
+        </a>
+      </figure>
+      {% endif %} {% endfor %}
+    </div>
+  </body>
+</html>

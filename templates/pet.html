@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{pet.name}}</title>
+    <link href="/static/style.css" type="text/css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="grid-child one">
+        <img id="profile-photo" src="{{pet.photo_url}}" />
+        <div class="grid-container">
+          <div class="grid-child one">
+            {% if pet.available %}
+            <form action="/{{pet.id}}/adopt" method="post">
+              <button id="available">Adopt</button>
+            </form>
+            {% else %}
+            <button id="unavailable">Adopt</button>
+            {% endif %}
+          </div>
+          <div class="grid-child two">
+            <form action="/{{pet.id}}/edit" method="get">
+                <button id="edit">Edit</button>
+            </form>
+          </div>
+          <div class="grid-child three">
+            <form action="/{{pet.id}}/delete" method="get">
+                <button>Delete</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="grid-child two">
+        <h2>Fun facts about {{pet.name}}</h2>
+        <dl>
+          <dt>Specie</dt>
+          <dd>{{pet.species}}</dd>
+          <dt>Age</dt>
+          <dd>{{pet.age}}</dd>
+          <dt>Notes</dt>
+          <dd>{{pet.notes}}</dd>
+        </dl>
+      </div>
+    </div>
+  </body>
+</html>
