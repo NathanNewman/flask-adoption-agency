@@ -2,10 +2,25 @@ body {
     background-color: aqua;
 }
 
+h1 {
+    text-align: center;
+    background-color: darkblue;
+    color:aliceblue;
+}
+
+h2 {
+    text-align: center;
+    color:sienna;
+}
+
+h3 {
+    color: sienna;
+}
+
 .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 40px;
+    grid-gap: 20px;
 }
 
 .photo {
@@ -48,6 +63,11 @@ body {
     transition-duration: 0.2s;
 }
 
+.buttons {
+    margin: 0 auto;
+    display: inline;
+}
+
 #adopt:hover {
     background-color:darkblue;
 }
@@ -78,4 +98,23 @@ body {
 
 #delete:hover {
     background-color: darkred;
+}
+
+.facts {
+    color:sienna;
+    font-style: italic;
+}
+
+#pets {
+    background-color:magenta;
+    border: none;
+    color:white;
+    padding: 10px 14px;
+    text-align: center;
+    font-size: 16px;
+    transition-duration: 0.2s; 
+}
+
+#pets:hover {
+    background-color: darkmagenta;
 }

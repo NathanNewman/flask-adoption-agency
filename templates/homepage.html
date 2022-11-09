@@ -8,7 +8,7 @@
     <link href="/static/style.css" type="text/css" rel="stylesheet" />
   </head>
   <body>
-    <h1>Pets</h1>
+    <h1>Pet Adoption Agency</h1>
     <form action="/add">
       <button id="add">Add Pet</button>
     </form>
@@ -17,14 +17,16 @@
       <figure>
         <a href="/{{pet.id}}">
           <img class="photo" id="{{pet.id}}" src="{{pet.photo_url}}" />
-        <figcaption class="photo-label">{{pet.name}} is available</figcaption>
+          <figcaption class="photo-label">{{pet.name}} is available</figcaption>
         </a>
       </figure>
       {% else %}
       <figure>
         <a href="/{{pet.id}}">
-        <img class="photo" id="{{pet.id}}" src="{{pet.photo_url}}" />
-        <figcaption class="photo-label">{{pet.name}} is unavailable</figcaption>
+          <img class="photo" id="{{pet.id}}" src="{{pet.photo_url}}" />
+          <figcaption class="photo-label">
+            {{pet.name}} is unavailable
+          </figcaption>
         </a>
       </figure>
       {% endif %} {% endfor %}

@@ -8,6 +8,7 @@
     <link href="/static/style.css" type="text/css" rel="stylesheet" />
   </head>
   <body>
+    <h1>Pet Adoption Agency</h1>
     <form method="POST">
       {{ form.hidden_tag() }} {% for field in form if field.widget.input_type !=
       'hidden' %}
